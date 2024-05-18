@@ -1,13 +1,7 @@
-<footer class="content-footer footer bg-footer-theme">
-    <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-        <div class="mb-2 mb-md-0">
-            ©
-            <script>
-                document.write(new Date().getFullYear());
-            </script>
-            , Sneat template
-
-        </div>
-
+<div class="footer-wrapper">
+    <div class="footer-section f-section-1">
+        <p class="">Copyright © {{ date('Y') }} <a target="_blank"
+                href="{{ url('/') }}">{{ env('APP_NAME') }}</a>, All rights reserved.</p>
     </div>
-</footer>
+
+</div>
