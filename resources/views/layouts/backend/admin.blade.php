@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
@@ -20,7 +20,6 @@
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
-    <link href="{{ asset('backend_theme') }}/plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('backend_theme') }}/assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
     <link rel="stylesheet" type="text/css" href="{{ asset('backend_theme') }}/assets/css/elements/alert.css">
@@ -39,7 +38,7 @@
     @stack('css')
 </head>
 
-<body>
+<body class="sidebar-noneoverflow">
     <!-- BEGIN LOADER -->
     <div id="load_screen">
         <div class="loader">
@@ -75,6 +74,7 @@
     <!-- END MAIN CONTAINER -->
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+
     <script src="{{ asset('backend_theme') }}/assets/js/libs/jquery-3.1.1.min.js"></script>
     <script src="{{ asset('backend_theme') }}/bootstrap/js/popper.min.js"></script>
     <script src="{{ asset('backend_theme') }}/bootstrap/js/bootstrap.min.js"></script>
@@ -83,16 +83,15 @@
     <script>
         $(document).ready(function() {
             App.init();
+
         });
     </script>
     @stack('js')
-    <script src="{{ asset('backend_theme') }}/plugins/highlight/highlight.pack.js"></script>
     <script src="{{ asset('backend_theme') }}/assets/js/custom.js"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="{{ asset('backend_theme') }}/assets/js/scrollspyNav.js"></script>
-    <script src="{{ asset('backend_theme') }}/plugins/apex/apexcharts.min.js"></script>
     <script src="{{ asset('backend_theme') }}/assets/js/dashboard/dash_1.js"></script>
     <script src="{{ asset('backend_theme') }}/plugins/table/datatable/datatables.js"></script>
     <script src="{{ asset('backend_theme') }}/plugins/sweetalerts/sweetalert2.min.js"></script>
