@@ -56,12 +56,17 @@
                                     </span>
                                 @enderror
                             </div>
-                            <div class="mb-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                                        {{ old('remember') ? 'checked' : '' }} />
-                                    <label class="form-check-label" for="remember-me"> Ingat Login </label>
+                            <div class="field-wrapper terms_condition">
+                                <div class="n-chk">
+                                    <label class="new-control new-checkbox checkbox-primary">
+                                        <input class="new-control-input" type="checkbox" name="remember" id="remember"
+                                            {{ old('remember') ? 'checked' : '' }} />
+
+                                        <span class="new-control-indicator"></span><span>Remember me</span>
+
+                                    </label>
                                 </div>
+
                             </div>
                             <div class="d-sm-flex justify-content-between">
                                 <div class="field-wrapper">
